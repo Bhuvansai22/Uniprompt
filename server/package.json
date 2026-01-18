@@ -1,4 +1,9 @@
 {
+  "name": "uniprompt-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "axios": "^1.13.2",
     "bcryptjs": "^3.0.3",
