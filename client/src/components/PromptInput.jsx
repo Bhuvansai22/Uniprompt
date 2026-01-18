@@ -17,7 +17,8 @@ const PromptInput = ({ setOptimizedPrompt }) => {
         setOptimizedPrompt(''); // Clear previous result
 
         try {
-            const response = await axios.post('http://localhost:5000/api/optimize', { prompt });
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+            const response = await axios.post(`${apiUrl}/optimize`, { prompt });
             setOptimizedPrompt(response.data.optimizedPrompt);
         } catch (err) {
             setError('Failed to optimize prompt. Please try again.');
