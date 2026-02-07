@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from "@vercel/analytics/react";
 import PromptInput from './components/PromptInput';
 import PromptResult from './components/PromptResult';
 
@@ -29,6 +30,7 @@ function App() {
                     <PromptResult optimizedPrompt={optimizedPrompt} />
                 </main>
             </div>
+            <Analytics />
         </div>
     );
 }

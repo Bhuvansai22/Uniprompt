@@ -15,7 +15,7 @@ app.use(express.json());
 const rateLimit = require('express-rate-limit');
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 5, // Limit each IP to 5 requests per windowMs
+    max: 100, // Limit each IP to 100 requests per windowMs
     message: {
         error: 'Too many requests.',
         details: 'You have exceeded the limit of 5 prompts per 15 minutes. Please try again later.'
